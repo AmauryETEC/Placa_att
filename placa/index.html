@@ -37,9 +37,6 @@
         /* Garante que a imagem de fundo esteja atrás do conteúdo */
         overflow: hidden;
         /* Esconde qualquer parte da imagem que ultrapasse a metade da página */
-
-
-
     }
 
     h1 {
@@ -218,6 +215,22 @@
             }
 
             resultadoPlacaElement.innerHTML = "Placa não encontrada.";
+        });
+
+        // Função para consultar o ônibus e exibir o resultado quando pressionar Enter no campo de número de frota
+        document.getElementById("numeroOnibus").addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("consultarBtn").click();
+            }
+        });
+
+        // Função para consultar a placa do ônibus e exibir o resultado quando pressionar Enter no campo de placa
+        document.getElementById("placaOnibus").addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("consultarPlacaBtn").click();
+            }
         });
     </script>
 </body>
